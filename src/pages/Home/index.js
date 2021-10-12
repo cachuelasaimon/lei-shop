@@ -1,10 +1,27 @@
 import React from "react";
 import styled from "styled-components";
-import { Typography, Grid } from "@mui/material";
+import { Grid, Container } from "@mui/material";
 
 // Custom Components
 import { Carousel } from "components";
 
 export default function HomePage() {
-  return <Carousel />;
+  return (
+    <StyledContainer>
+      <Carousel />
+      <StyledGrid container>
+        <Grid item></Grid>
+      </StyledGrid>
+    </StyledContainer>
+  );
 }
+
+const StyledContainer = styled(Container)`
+  padding-bottom: 2rem;
+  width: 100%;
+  overflow-x: hidden;
+`;
+
+const StyledGrid = styled(Grid)`
+  padding-top: 2rem;
+`;
